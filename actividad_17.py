@@ -24,10 +24,12 @@ class Favoritos:
         self.followed = followed
     #sort
     def positive_sort(self):
-        print(f"Su lista de favoritos a sido ordenada de manera ascendente:{self.followed.sort()}")
+        new_followed = self.followed.sort()
+        print(f"Su lista de favoritos a sido ordenada de manera ascendente:{new_followed}")
     #reverse()
     def negative_sort(self):
-        print(f"Su lista de favoritos a sido ordenada de manera descendente:{self.followed.reverse()}")
+        neo_followed = self.followed.reverse()
+        print(f"Su lista de favoritos a sido ordenada de manera descendente:{neo_followed}")
     #clear()
     def doom_nuke(self):
         print("Su lista de favoritos será purgada...")
