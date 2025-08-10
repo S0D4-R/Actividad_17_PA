@@ -47,6 +47,8 @@ while key:
                     "2.Agregar a favoritos\n"
                     "3.Eliminar del carrito\n"
                     "4.Ordenar favoritos.\n"
+                    "5. Limpiar favoritos\n"
+                    "6. Salir\n"
                     "Opción: ")
         match ops:
             case "1":
@@ -71,8 +73,18 @@ while key:
                     print("Eso no es un valor aceptado, regresando a menú...")
 
             case "3":
-                pass
+                user_cart.remove_from_cart()
             case "4":
+                sorting_ops = input("Desea ordenar de manera ascendente Y/N: ")
+                if sorting_ops.lower() == "y":
+                    user_followed.positive_sort()
+                elif sorting_ops.lower() == "n":
+                    user_followed.negative_sort()
+                else:
+                    print("Esa opción no fue válida, volviendo al menú...\n")
+            case "5":
+                user_followed.doom_nuke()
+            case "6":
                 key = False
                 print("Gracias por usar el programa")
     except ValueError:
